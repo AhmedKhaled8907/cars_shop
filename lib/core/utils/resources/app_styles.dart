@@ -1,5 +1,6 @@
 import 'package:cars_shop/core/utils/resources/app_colors.dart';
 import 'package:cars_shop/core/utils/resources/app_fonts.dart';
+import 'package:cars_shop/core/utils/resources/app_size_config.dart';
 import 'package:flutter/material.dart';
 
 abstract class AppStyles {
@@ -90,9 +91,9 @@ abstract class AppStyles {
 
 double getScaleFactor(BuildContext context) {
   double width = MediaQuery.sizeOf(context).width;
-  if (width < 600) {
+  if (width < AppSizeConfig.tabletWidth) {
     return width / 400;
-  } else if (width < 900) {
+  } else if (width < AppSizeConfig.desktopWidth) {
     return width / 700;
   } else {
     return width / 1000;
