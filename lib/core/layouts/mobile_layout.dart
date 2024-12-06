@@ -1,4 +1,4 @@
-import 'package:cars_shop/presentation/home/views/home_view.dart';
+import 'package:cars_shop/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 
 class MobileLayout extends StatelessWidget {

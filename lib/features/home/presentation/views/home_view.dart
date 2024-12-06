@@ -1,7 +1,7 @@
 import 'package:cars_shop/core/utils/resources/app_assets.dart';
 import 'package:cars_shop/core/utils/resources/app_colors.dart';
 import 'package:cars_shop/core/utils/resources/app_values.dart';
-import 'package:cars_shop/presentation/home/views/widgets/home_view_body.dart';
+import 'package:cars_shop/features/home/presentation/views/widgets/home_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

@@ -1,5 +1,5 @@
-import 'package:cars_shop/presentation/layouts/adaptive_layout.dart';
-import 'package:cars_shop/presentation/layouts/mobile_layout.dart';
+import 'package:cars_shop/core/layouts/adaptive_layout.dart';
+import 'package:cars_shop/core/layouts/mobile_layout.dart';
 import 'package:flutter/material.dart';
 
 class DashboardView extends StatelessWidget {

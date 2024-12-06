@@ -1,5 +1,5 @@
-import 'package:cars_shop/presentation/home/views/home_view.dart';
-import 'package:cars_shop/presentation/layouts/dashboard_view.dart';
+import 'package:cars_shop/core/layouts/dashboard_view.dart';
+import 'package:cars_shop/features/home/presentation/views/home_view.dart';
 import 'package:go_router/go_router.dart';
 
 abstract class AppRoutes {
