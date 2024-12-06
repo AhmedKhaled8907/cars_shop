@@ -10,7 +10,7 @@ class CategoryListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.width * 0.35,
+      height: MediaQuery.of(context).size.width * 0.3,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: categoriesList.length,
