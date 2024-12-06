@@ -8,6 +8,7 @@ class CarModel {
   final int productionYear;
   final int km;
   final int startSellingAt;
+  final int? slender;
 
   CarModel({
     required this.image,
@@ -17,6 +18,7 @@ class CarModel {
     required this.productionYear,
     required this.km,
     required this.startSellingAt,
+    this.slender = 6,
   });
 }
 

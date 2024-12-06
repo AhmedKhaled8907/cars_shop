@@ -79,7 +79,7 @@ class CarItem extends StatelessWidget {
     );
   }
 
-  Image carItemImage(BuildContext context) {
+  Widget carItemImage(BuildContext context) {
     return Image.asset(
       carModel.image,
       height: MediaQuery.of(context).size.width * 0.4,

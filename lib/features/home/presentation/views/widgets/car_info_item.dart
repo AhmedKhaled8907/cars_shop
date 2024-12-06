@@ -17,42 +17,45 @@ class CarInfoItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: AppPadding.p4,
-          // horizontal: AppPadding.p8,
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        vertical: AppPadding.p4,
+        horizontal: AppPadding.p4,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: const BorderRadius.all(
+          Radius.circular(AppSize.s12),
         ),
-        decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(
-            Radius.circular(AppSize.s12),
-          ),
-          border: Border.all(
-            color: Colors.grey[900]!,
-          ),
-          color: Colors.white,
+        border: Border.all(
+          color: Colors.grey[900]!,
         ),
-        child: Column(
-          children: [
-            SvgPicture.asset(
+        color: Colors.white,
+      ),
+      child: Column(
+        children: [
+          ConstrainedBox(
+            constraints: const BoxConstraints(maxHeight: 30),
+            child: SvgPicture.asset(
               image,
             ),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                title,
-                style: AppStyles.styleMedium14(context).copyWith(),
-              ),
+          ),
+          const SizedBox(height: AppSize.s4),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              title,
+              style: AppStyles.styleMedium14(context).copyWith(),
             ),
-            FittedBox(
-              fit: BoxFit.scaleDown,
-              child: Text(
-                '$number',
-                style: AppStyles.styleMedium14(context).copyWith(),
-              ),
+          ),
+          const SizedBox(height: AppSize.s4),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              '$number',
+              style: AppStyles.styleMedium14(context).copyWith(),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
