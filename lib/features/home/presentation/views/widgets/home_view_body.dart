@@ -1,4 +1,5 @@
 import 'package:cars_shop/core/utils/resources/app_values.dart';
+import 'package:cars_shop/features/home/data/models/car_model.dart';
 import 'package:cars_shop/features/home/presentation/views/widgets/banner_image.dart';
 import 'package:cars_shop/features/home/presentation/views/widgets/car_country_list_view.dart';
 import 'package:cars_shop/features/home/presentation/views/widgets/car_grid_view.dart';
@@ -11,11 +12,11 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(top: AppPadding.p16),
+    return Padding(
+      padding: const EdgeInsets.only(top: AppPadding.p16),
       child: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -30,8 +31,10 @@ class HomeViewBody extends StatelessWidget {
               ],
             ),
           ),
-          CarGridView(),
-          SliverToBoxAdapter(
+          CarGridView(
+            carsList: listOfCars,
+          ),
+          const SliverToBoxAdapter(
             child: Column(
               children: [
                 SizedBox(height: AppSize.s16),

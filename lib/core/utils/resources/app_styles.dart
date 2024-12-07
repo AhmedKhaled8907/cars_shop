@@ -64,6 +64,30 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleMedium20(BuildContext context) {
+    return TextStyle(
+      fontFamily: FontConstants.fontFamily,
+      color: AppColors.primaryColor,
+      fontSize: getResponsiveFontSize(
+        context,
+        fontSize: FontSize.s20,
+      ),
+      fontWeight: FontWeights.medium,
+    );
+  }
+
+  static TextStyle styleBold14(BuildContext context) {
+    return TextStyle(
+      fontFamily: FontConstants.fontFamily,
+      color: AppColors.primaryColor,
+      fontSize: getResponsiveFontSize(
+        context,
+        fontSize: FontSize.s14,
+      ),
+      fontWeight: FontWeights.bold,
+    );
+  }
+
   static TextStyle styleBold16(BuildContext context) {
     return TextStyle(
       fontFamily: FontConstants.fontFamily,
@@ -83,6 +107,18 @@ abstract class AppStyles {
       fontSize: getResponsiveFontSize(
         context,
         fontSize: FontSize.s18,
+      ),
+      fontWeight: FontWeights.bold,
+    );
+  }
+
+  static TextStyle styleBold24(BuildContext context) {
+    return TextStyle(
+      fontFamily: FontConstants.fontFamily,
+      color: AppColors.primaryColor,
+      fontSize: getResponsiveFontSize(
+        context,
+        fontSize: FontSize.s24,
       ),
       fontWeight: FontWeights.bold,
     );

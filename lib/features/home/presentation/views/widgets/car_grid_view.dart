@@ -1,17 +1,18 @@
 import 'package:cars_shop/core/utils/resources/app_routes.dart';
+import 'package:cars_shop/features/car_details/data/models/car_details_model.dart';
 import 'package:cars_shop/features/home/data/models/car_model.dart';
 import 'package:cars_shop/features/home/presentation/views/widgets/car_item.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class CarGridView extends StatefulWidget {
-  const CarGridView({super.key});
+class CarGridView extends StatelessWidget {
+  const CarGridView({
+    super.key,
+    required this.carsList,
+  });
 
-  @override
-  State<CarGridView> createState() => _CarGridViewState();
-}
+  final List<CarModel> carsList;
 
-class _CarGridViewState extends State<CarGridView> {
   @override
   Widget build(BuildContext context) {
     return SliverGrid.builder(
@@ -27,7 +28,10 @@ class _CarGridViewState extends State<CarGridView> {
           onTap: () {
             GoRouter.of(context).push(
               AppRoutes.kCarDetailsRoute,
-              extra: carsList[index],
+              extra: CarDetailsArgs(
+                carModel: carsList[index],
+                carDetailsModel: CarDetailsModel(),
+              ),
             );
           },
           child: CarItem(

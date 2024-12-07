@@ -88,14 +88,16 @@ class CarItem extends StatelessWidget {
     );
   }
 
-  Center carItemTitle(BuildContext context) {
-    return Center(
-      child: FittedBox(
-        fit: BoxFit.scaleDown,
-        child: Text(
-          '${carModel.title} | يوكن | ${carModel.grade}',
-          style: AppStyles.styleMedium14(context).copyWith(color: Colors.black),
+  Widget carItemTitle(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: AppPadding.p4),
+      child: Text(
+        '${carModel.title} | يوكن | ${carModel.grade}',
+        style: AppStyles.styleBold14(context).copyWith(
+          color: Colors.black,
         ),
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
       ),
     );
   }

@@ -22,7 +22,7 @@ class CarModel {
   });
 }
 
-List<CarModel> carsList = [
+List<CarModel> listOfCars = [
   CarModel(
     image: AppAssets.imagesImage1,
     title: 'جيلي',
